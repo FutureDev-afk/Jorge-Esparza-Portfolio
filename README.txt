@@ -1,0 +1,1 @@
+This is a my portfolio to showcase projects I've been appart of.
