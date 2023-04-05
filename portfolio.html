@@ -4,40 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/335e9ab6d5.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Jorge Esparza</title>
 </head>
 <body>
      <nav>
-        <h1>Jorge Esparza</h1>
-        <ul class="navigation">
-            <li class="navigation-item">About Me</li>
-            <li class="navigation-item">Projects</li>
-            <li class="navigation-item">Skills</li>
-            <li class="navigation-item">Contact</li>
+        <h2 id="name">Jorge Esparza</h2>
+        <ul class="navigation-items">
+            <li class="navigation-item"><a href="#about-me">About Me</a></li>
+            <li class="navigation-item"><a href="#projects">Projects</a></li>
+            <li class="navigation-item"><a href="#skills">Skills</a></li>
+            <li class="navigation-item"><a href="">Contact</a></li>
         </ul>
      </nav>
-    <section class="about-me">
-        <h2>About Me</h2>
-        <p>Hi! My name is Jorge Esparza and I’m currently a Codecademy student. </p>
-        <br>
-        <p>In my free time I like to catch up on the latest in tech, camp, and develop/play video games. I’m someone who likes to work smarter not harder. </p>
-        <div class="headShot">
-            <img src="/assets/headShot.jpg" alt="Picture of Jorge Esparza">
-        </div>
-    </section>
-    <section class="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>Project 1</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
-            <li>Project 4</li>
-        </ul>
-    </section>
-    <section class="skills">
-        <h2>Skills</h2>
-    </section>
-
+     <main>
+        <section id="about-me">
+            <div class="about-me-container">
+                <div class="about-me-text-container">
+                    <h2>About Me</h2>
+                    <p>Hi! My name is Jorge Esparza and I’m currently a Codecademy student.</p>
+                    <p>In my free time I like to catch up on the latest in tech, camp, and develop/play video games. I’m someone who likes to work smarter not harder. </p>
+                </div>
+                <div class="rotate-expand-text">
+                    <img src="assets/headShot.jpg.jpg" alt="Picture of Jorge Esparza" class="headShot">
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <details class="project">
+                <summary class="project-title"> 
+                    <h3>Message generator</h3>
+                </summary>
+                <img src="assets/Message gennorator.png" alt="photo of the message generator code" class="project-image">
+                <p>I was tasked to create a code that will randomly genarate a message each time the code was ran.</p>
+            </details>
+            <details class="project">
+                <summary class="project-title"> 
+                    <h3>Paint Shop</h3>
+                </summary>
+                <img src="assets/Paint-shop.png" alt="photo of the Paint Shop website" class="project-image">
+                <p>This was one of my first websites I developed.</p>
+            </details>
+            <details class="project">
+                <summary class="project-title"> 
+                    <h3>Obi's Security</h3>
+                </summary>
+                <img src="assets/Obi's-security.png" alt="photo of Obi's Security webiste" class="project-image">
+                <p>Here is an example business website I developed.</p>
+            </details>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div id="skills-container" class="expand-text">
+                <i class="fa-brands fa-html5 fa-2xl"></i>
+                <i class="fa-brands fa-css3-alt fa-2xl"></i>
+                <i class="fa-brands fa-js fa-2xl"></i>
+                <i class="fa-brands fa-git fa-2xl"></i>
+                <i class="fa-brands fa-github fa-2xl"></i>
+                <i class="fa-brands fa-node fa-2xl"></i>
+            </div>
+        </section>
+     </main>
+     <script src="scripts.js"></script>
+     <footer></footer>
 </body>
 </html>

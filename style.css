@@ -1,5 +1,14 @@
+:root {
+    --spacing-1: 8px;
+    --spacing-2: 12px;
+    --spacing-3: 16px;
+    --spacing-4: 24px;
+    --border-radius: 12px;
+    --font-color: #323232;
+}
 html{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: beige;
 }
 body{
     padding: 0 var(--spacing-3);
@@ -8,20 +17,96 @@ body{
     display: flex;
     flex-direction: column;
 }
+#logo{
+    margin: 0;
+}
+/*--Navigation--*/
 nav{
     display: flex;
     text-align: center;
-    padding: 1px;
+    padding: var(--spacing-3);
 }
-.navigation{
+
+.navigation-items {
     display: flex;
     list-style-type: none;
     padding: 0;
     align-items: center;
     margin: 0;
     margin-left: auto;
-    justify-content: space-evenly;
 }
 .navigation-item {
-    margin: var(--spacing-1);
+    margin: 8px;
 }
+/*--About Me--*/
+section{
+    padding: var(--spacing-3);
+    display: block;
+}
+div{
+    display: block;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.about-me-container{
+    display: flex;
+}
+.about-me-text-container{
+    margin-right: var(--spacing-3);
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.headShot {
+    width: 300px;
+    border-radius: var(--border-radius);
+    flex-shrink: 0;
+}
+
+/*--Projects--*/
+
+details{
+    cursor: pointer;
+}
+summary{
+    list-style: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+}
+.project-image{
+    width: 50%;
+}
+
+/*--Skills--*/
+
+#skills-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*--Animation--*/
+
+.rotate-expand-text {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .expanded {
+    transform: scale(1.2) rotate(360deg);
+  }
+
+  .expand-text {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .expanded {
+    transform: scale(1.2);
+  }
