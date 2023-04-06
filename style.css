@@ -10,6 +10,10 @@ html{
     font-family: 'Roboto', sans-serif;
     background-color: beige;
 }
+html, body {
+    height: 100%;
+    color: var(--font-color);
+}
 body{
     padding: 0 var(--spacing-3);
     max-width: 900px;
@@ -17,7 +21,11 @@ body{
     display: flex;
     flex-direction: column;
 }
-#logo{
+a{
+    text-decoration: none;
+    color: black;
+}
+#name{
     margin: 0;
 }
 /*--Navigation--*/
@@ -34,6 +42,7 @@ nav{
     align-items: center;
     margin: 0;
     margin-left: auto;
+    font-weight: bold;
 }
 .navigation-item {
     margin: 8px;
@@ -91,22 +100,74 @@ summary{
     flex-wrap: wrap;
 }
 
+footer {
+    margin-top: auto;
+    padding: var(--spacing-2) 0;
+    text-align: center;
+}
+
 /*--Animation--*/
 
-.rotate-expand-text {
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .expanded {
-    transform: scale(1.2) rotate(360deg);
+  @media screen and (min-width: 769px) {
+    .rotate-expand-text {
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+      }
+      
+      .expanded {
+        transform: scale(1.2) rotate(360deg);
+      }
+    
+      .expand-text {
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+      }
+      
+      .expanded {
+        transform: scale(1.2);
+      }
+    
   }
 
-  .expand-text {
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .expanded {
-    transform: scale(1.2);
-  }
+  /*--Website Responsive--*/
+
+  @media screen and (max-width: 767px) {
+    /*--About Me--*/
+    .about-me-container{
+        display: block;
+    }
+    .about-me-text-container{
+        margin-right: var(--spacing-3);
+        height: 100%;
+        width: 130%;
+    }
+    
+    .headShot {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    /*--Navigation--*/
+    #name{
+        display: block;
+        height: 50%;
+        width: 130%;
+        text-align: center;
+        
+    }
+    nav{
+        display: block;
+        text-align: center;
+        padding-top: 2rem;
+    }
+    
+    .navigation-items {
+        display: flex;
+        list-style-type: none;
+        font-weight: bold;
+        padding-top: 2rem;
+        padding-left: 2rem;
+        margin-left: auto;
+    }
+}
